@@ -1,6 +1,4 @@
 ﻿import { useLocation } from "react-router-dom";
-import ShareButton from "../components/ShareButton";
-
 function getTodayDate() {
   const today = new Date();
   const day = today.getDate().toString().padStart(2, "0");
@@ -16,6 +14,17 @@ export default function Ticket() {
   const name = location.state.name;
   const ticketid = location.state.ticket;
 
+  const shareImageAsset = async () => {
+    console.log("WORKED");
+    const response = await fetch("ticket.svg");
+    const blob = await response.blob();
+    const file = new File([blob], "ticket.svg", { type: "image/svg+xml" });
+
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({ files: [file] });
+    }
+  };
+
   const handleLoad = () => {
     const ticket = document.querySelector("#ticket");
     const ticketDoc = ticket.contentDocument;
@@ -25,20 +34,13 @@ export default function Ticket() {
   };
   return (
     <div className="flex bg-gradient-to-br from-[#e21818] to-[#a00606] h-[100vh] sm:h-[90.6vh] p-5">
-      <ShareButton
-        url="https://hizliresim.com/1rt9utg"
-        type="image"
-        title="My Instagram story"
-        text="This is my Instagram story!"
+      <button
+        onClick={shareImageAsset} // Call shareImageAsset when the button is clicked
+        className="bg-blue-500 p-3 font-semibold text-white inline-flex items-center space-x-2 rounded-full"
       />
-
       <div className="grid grid-cols-1  grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 sm:place-items-center gap-4 my-auto mx-auto">
         <div className="flex flex-col items-center">
-          <object
-            data="ticket.svg"
-            type="image/svg+xml"
-            id="ticket"
-            onLoad={handleLoad}></object>
+          <object data="ticket.svg" type="image/svg+xml" id="ticket" onLoad={handleLoad}></object>
         </div>
         <div className="flex flex-col gap-2">
           <h1 className="text-4xl italic text-white font-semibold">Tebrikler!</h1>
