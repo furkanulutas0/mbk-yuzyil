@@ -16,9 +16,9 @@ export default function Ticket() {
 
   const shareImageAsset = async () => {
     console.log("WORKED");
-    const response = await fetch("ticket.svg");
+    const response = await fetch("mbklogo.png");
     const blob = await response.blob();
-    const file = new File([blob], "ticket.svg", { type: "image/svg+xml" });
+    const file = new File([blob], "mbklogo.png", { type: "image/png" });
 
     if (navigator.canShare && navigator.canShare({ files: [file] })) {
       await navigator.share({ files: [file] });
