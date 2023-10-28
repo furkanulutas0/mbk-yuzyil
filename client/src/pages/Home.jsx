@@ -34,7 +34,7 @@ export default function Home() {
     <div className="flex bg-gradient-to-br from-[#e21818] to-[#a00606] h-[100%] sm:h-[90.6vh] p-5">
       <div className="grid grid-cols-1  grid-rows-2 place-items-center md:grid-cols-2 md:grid-rows-1 md:place-items-center gap-8 my-auto mx-auto">
         <div className="flex flex-col items-center">
-          <img className="w-96 h-auto" src="/src/media/100yil.svg" alt="100.yil" />
+          <img className="w-96 h-auto" src="100yil.svg" alt="100.yil" />
           <h1 className=" text-center text-white font-medium text-3xl">
             Cumhuriyetin 100. Yılı Kutlu Olsun!
           </h1>

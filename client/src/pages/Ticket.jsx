@@ -35,7 +35,7 @@ export default function Ticket() {
       <div className="grid grid-cols-1  grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 sm:place-items-center gap-4 my-auto mx-auto">
         <div className="flex flex-col items-center">
           <object
-            data="/src/media/ticket.svg"
+            data="ticket.svg"
             type="image/svg+xml"
             id="ticket"
             onLoad={handleLoad}></object>
