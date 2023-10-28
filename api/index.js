@@ -2,6 +2,7 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import ticketRouter from "./routes/ticket.route.js";
+import path from "path";
 
 dotenv.config();
 mongoose
@@ -12,7 +13,16 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
+
+const __dirname = path.resolve();
+
 const app = express();
+
+app.use(express.static(__dirname + "/client/dist"));
+app.get("*", (req, res) => {
+  res.sendFile(__dirname, "client", "dist", "index.html");
+});
+
 app.use(express.json());
 app.listen(3000, () => {
   console.log(`Server listening on port http://localhost:3000`);
