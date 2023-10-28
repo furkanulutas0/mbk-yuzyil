@@ -26,7 +26,7 @@ export default function Ticket() {
   return (
     <div className="flex bg-gradient-to-br from-[#e21818] to-[#a00606] h-[100vh] sm:h-[90.6vh] p-5">
       <ShareButton
-        url="https://example.com/image.jpg"
+        url="https://hizliresim.com/1rt9utg"
         type="image"
         title="My Instagram story"
         text="This is my Instagram story!"
