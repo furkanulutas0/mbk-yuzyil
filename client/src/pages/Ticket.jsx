@@ -1,5 +1,4 @@
-﻿import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+﻿import { useLocation } from "react-router-dom";
 function getTodayDate() {
   const today = new Date();
   const day = today.getDate().toString().padStart(2, "0");
@@ -14,7 +13,6 @@ export default function Ticket() {
   const today = getTodayDate();
   const name = location.state.name;
   const ticketid = location.state.ticket;
-
   function convertObjectToPNG() {
     const object = document.querySelector("#ticket");
     const objectDoc = object.contentDocument;
@@ -38,30 +36,16 @@ export default function Ticket() {
     };
   }
   const shareImageAsset = async (pngDataUrl) => {
-    // Convert the remote image to a blob
+    console.log("WORKED");
     const response = await fetch(pngDataUrl);
     const blobImageAsset = await response.blob();
+    const file = new File([blobImageAsset], "ticket.png", { type: "image/png" });
 
-    // Prepare the file with proper metadata
-    const filesArray = [
-      new File([blobImageAsset], `ticket.png`, {
-        type: 'image/png',
-        lastModified: new Date().getTime(),
-      }),
-    ];
-
-    const shareData = {
-      title: `ticket.png`,
-      files: filesArray,
-    };
-
-    if (navigator.canShare && navigator.canShare(shareData)) {
-      await navigator.share(shareData);
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({ files: [file] });
     }
   };
 
-
-  // Example usage:
   const handleLoad = () => {
     const ticket = document.querySelector("#ticket");
     const ticketDoc = ticket.contentDocument;
@@ -71,12 +55,10 @@ export default function Ticket() {
   };
   return (
     <div className="flex bg-gradient-to-br from-[#e21818] to-[#a00606] h-[100vh] sm:h-[90.6vh] p-5">
+      <button type="submit" onClick={convertObjectToPNG}>Paylaş</button>
       <div className="grid grid-cols-1  grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 sm:place-items-center gap-4 my-auto mx-auto">
         <div className="flex flex-col items-center">
           <object data="ticket.svg" type="image/svg+xml" id="ticket" onLoad={handleLoad}></object>
-          <button onClick={convertObjectToPNG} type="submit">
-            Paylaş
-          </button>
         </div>
         <div className="flex flex-col gap-2">
           <h1 className="text-4xl italic text-white font-semibold">Tebrikler!</h1>
