@@ -36,7 +36,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex bg-gradient-to-br from-[#e21818] to-[#a00606] h-[100%] sm:h-[90.6vh] p-5">
+    <div className="flex bg-gradient-to-br from-[#e21818] to-[#a00606] h-[100%] sm:h-[85.4  vh] p-5">
       <div className="grid grid-cols-1  grid-rows-2 place-items-center md:grid-cols-2 md:grid-rows-1 md:place-items-center gap-8 my-auto mx-auto">
         <div className="flex flex-col items-center">
           <img className="w-96 h-auto" src="100yil.svg" alt="100.yil" />
@@ -44,10 +44,10 @@ export default function Home() {
             Cumhuriyetin 100. Yılı Kutlu Olsun!
           </h1>
           <p className="text-center text-slate-300 my-5">
-          Ey yükselen yeni nesil, istikbal sizindir. Cumhuriyet`i biz kurduk, O`nu yükseltecek ve sürdürecek sizlersiniz.
+          {"Ey yükselen yeni nesil, istikbal sizindir. Cumhuriyet'i biz kurduk, O'nu yükseltecek ve sürdürecek sizlersiniz."}
           </p>
         </div>
-        <div className="bg-slate-200 flex flex-col justify-center rounded-md p-1 md:p-10 h-[85vh]">
+        <div className="bg-slate-200 flex flex-col justify-center rounded-md p-1 md:p-10 h-[81.1vh]">
           <h1 className="text-4xl font-extrabold italic text-center">
             Sen de 100. Yıl Kartını Oluştur
           </h1>
