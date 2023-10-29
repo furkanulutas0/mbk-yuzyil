@@ -40,7 +40,7 @@ export default function Home() {
       <div className="grid grid-cols-1  grid-rows-2 place-items-center md:grid-cols-2 md:grid-rows-1 md:place-items-center gap-8 my-auto mx-auto">
         <div className="flex flex-col items-center">
           <img className="w-96 h-auto" src="100yil.svg" alt="100.yil" />
-          <h1 className=" text-center text-white font-medium text-3xl">
+          <h1 className=" text-center font- text-white font-medium text-3xl">
             Cumhuriyetin 100. Yılı Kutlu Olsun!
           </h1>
           <p className="text-center text-slate-300 my-5">

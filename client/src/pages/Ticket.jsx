@@ -55,7 +55,7 @@ export default function Ticket() {
   };
   return (
     
-    <div className="flex bg-gradient-to-br from-[#e21818] to-[#a00606] h-[100vh] sm:h-[90.6vh] p-5 min-w-full">
+    <div className="flex bg-gradient-to-br from-[#e21818] to-[#a00606] h-full sm:h-[90.6vh] p-5">
       <div className="grid grid-cols-1 grid-rows-2 sm:grid-cols-2 sm:grid-rows-1 sm:place-items-center gap-4 mx-auto">
         <div className="flex">
           <object
@@ -69,17 +69,16 @@ export default function Ticket() {
           <h1 className="text-4xl italic text-white font-semibold">Tebrikler!</h1>
           <p className="text-slate-300 my-5">
             {
-              "Cumhuriyet, milletimizin iradesiyle yönetildiği bir yönetim biçimini temsil eder. Eşitlik, adalet, laiklik ve halk egemenliği temelinde yükselen Türkiye Cumhuriyeti, tarih boyunca pek çok zorluğa göğüs germiş ve büyük başarılar elde etmiştir. Bugün, Cumhuriyet'in 100. yılını kutlamak, bu değerleri ve kazanımları onurlandırmak için bir fırsattır.Türkiye Cumhuriyeti'nin 100. yılında, bir arada, birlikte ve kardeşçe daha aydınlık yarınlara doğru ilerlemek dileğiyle, Cumhuriyet Bayramımız kutlu olsun! 🇹🇷 #Cumhuriyet100"
+              " Eşitlik, adalet, laiklik ve halk egemenliği temelinde yükselen Türkiye Cumhuriyeti, tarih boyunca pek çok zorluğa göğüs germiş ve büyük başarılar elde etmiştir. Bugün, Cumhuriyet'in 100. yılını kutlamak, bu değerleri ve kazanımları onurlandırmak için bir fırsattır.Türkiye Cumhuriyeti'nin 100. yılında, bir arada, birlikte ve kardeşçe daha aydınlık yarınlara doğru ilerlemek dileğiyle, Cumhuriyet Bayramımız kutlu olsun! 🇹🇷 #Cumhuriyet100"
             }
           </p>
+          
           <div className="w-1/2 opacity-50 h-1 rounded-2xl bg-slate-200"></div>
-          <div className="flex flex-wrap justify-start items-center gap-2 my-5">
-            <button
+          <button
               onClick={convertObjectToPNG}
-              className="text-white font-bold py-2 px-5 bg-slate-700 rounded-lg  hover:bg-slate-800 ease-in transition-all shadow-lg">
+              className="w-1/2 sm:w-1/5 text-white text-center font-bold py-2 px-5 bg-slate-700 rounded-lg  hover:bg-slate-800 ease-in transition-all shadow-lg">
               Paylaş
             </button>
-          </div>
         </div>
       </div>
     </div>
