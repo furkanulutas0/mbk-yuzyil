@@ -1075,10 +1075,10 @@
 <path d="M106.051 160.136C106.18 160.136 106.309 160.136 106.442 160.136C106.46 160.19 106.479 160.243 106.498 160.298C106.461 160.333 106.424 160.369 106.386 160.406C106.331 160.388 106.276 160.37 106.219 160.352C106.256 160.316 106.292 160.281 106.33 160.244C106.238 160.226 106.146 160.208 106.051 160.19C106.051 160.172 106.051 160.155 106.051 160.136Z" fill="#F2CFD2"/>
 </g>
 </g>
-<text id="name" fill="black" xml:space="preserve" style="white-space: pre" font-family="Anton" font-size="40" letter-spacing="0.1em"><tspan id="name-value" x="256" y="93.9162">Furkan Ulutaş</tspan></text>
-<text id="date" fill="black" fill-opacity="0.5" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="15" font-style="italic" font-weight="300" letter-spacing="0.065em"><tspan id="date-value" x="256" y="120.455">gg.aa.yyyy</tspan></text>
-<text id="id" fill="#858585" fill-opacity="0.5" xml:space="preserve" style="white-space: pre" font-family="Aldrich" font-size="20" letter-spacing="0.045m"><tspan x="357" y="29.0002">Yüzyıl Kart Id:</tspan><tspan id = "ticket-value" x="515" y="29.0002"> TR19232023000000</tspan></text>
-<text id="bodytext" fill="black" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="18" letter-spacing="0.055em"><tspan x="260.052" y="173">"Cumhuriyeti biz kurduk onu yükseltecek </tspan><tspan x="270.852" y="197">olan sizlersiniz" </tspan> <tspan x="415.852" y="222"> - Mustafa Kemal Atatürk</tspan></text>
+<text id="name" fill="#000000" xml:space="preserve" style="white-space: pre" font-family="Anton" font-size="40" letter-spacing="0.1em"><tspan id="name-value" x="256" y="93.9162"></tspan></text>
+<text id="date" fill="#000000" fill-opacity="1" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="15" font-style="italic" font-weight="300" letter-spacing="0.065em"><tspan id="date-value" x="256" y="120.455"></tspan></text>
+<text id="id" fill="#000000" fill-opacity="1" xml:space="preserve" style="white-space: pre" font-family="Aldrich" font-size="20" letter-spacing="0.045m"><tspan x="357" y="29.0002">Yüzyıl Kart Id:</tspan><tspan id = "ticket-value" x="515" y="29.0002"></tspan></text>
+<text id="bodytext" fill="#000000" xml:space="preserve" style="white-space: pre" font-family="Inter" font-size="18" letter-spacing="0.055em"><tspan x="260.052" y="173">"Cumhuriyeti biz kurduk onu yükseltecek </tspan><tspan x="270.852" y="197">olan sizlersiniz" </tspan> <tspan x="415.852" y="222"> - Mustafa Kemal Atatürk</tspan></text>
 </g>
 <defs>
 <style>
