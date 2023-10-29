@@ -3,7 +3,5 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    font-family: "Proxima Nova", system-ui, sans-serif;
-  }
+  @import url('https://fonts.googleapis.com/css2?family=Aldrich&family=Anton&family=Inter:wght@300&family=Pathway+Gothic+One&display=swap');
 }

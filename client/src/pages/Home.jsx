@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 export default function Home() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState();
+  const [loading, setLoading] = useState(false);
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -13,6 +14,7 @@ export default function Home() {
 
   const handleSumbit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const res = await fetch("/api/post/ticket/new-ticket", {
         method: "POST",
@@ -21,11 +23,14 @@ export default function Home() {
       });
       const data = await res.json();
       if (data.success === false) {
-        console.log(data.message);
+        setLoading(false);
         return;
       }
+      setLoading(false);
       navigate("/ticket", { state: { ticket: data.data.ticketid, name: data.data.fullname } });
+    
     } catch (err) {
+      setLoading(false);
       console.log(err);
     }
   };
@@ -39,9 +44,7 @@ export default function Home() {
             Cumhuriyetin 100. Yılı Kutlu Olsun!
           </h1>
           <p className="text-center text-slate-300 my-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque praesentium repudiandae
-            earum id dolore ipsum perspiciatis, architecto deleniti reprehenderit rerum ipsam itaque
-            expedita sapiente fugit ab consequatur cum, in repellendus?
+          Ey yükselen yeni nesil, istikbal sizindir. Cumhuriyet`i biz kurduk, O`nu yükseltecek ve sürdürecek sizlersiniz.
           </p>
         </div>
         <div className="bg-slate-200 flex flex-col justify-center rounded-md p-1 md:p-10 h-[85vh]">
@@ -49,9 +52,7 @@ export default function Home() {
             Sen de 100. Yıl Kartını Oluştur
           </h1>
           <p className="text-center my-5 ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam necessitatibus vitae
-            sapiente placeat, nobis quibusdam blanditiis mollitia enim reprehenderit dicta
-            architecto tenetur culpa eum ratione odit laudantium, quos similique optio!
+          Kardeşçe birlikte yürüdüğümüz 100 yılda, Cumhuriyet`in özgürlük ve bağımsızlık çınarı olarak ulaştığı bu büyük dönüm noktasında, sanal kartınla bu değerli günü ölümsüzleştir! #Cumhuriyet100Yaşında
           </p>
           <form
             onSubmit={handleSumbit}
@@ -66,9 +67,9 @@ export default function Home() {
               maxLength={30}
             />
             <button
-              className="bg-purple-700 rounded-md p-2 px-5 text-white font-medium"
+              className="bg-purple-700 rounded-md p-2 px-5 text-white font-medium hover:bg-purple-800 transition-all ease-in"
               type="submit">
-              Kaydet
+              {loading ? "Yükleniyor..." : "Oluştur"}
             </button>
           </form>
         </div>
