@@ -46,3 +46,15 @@ export const getTicket = async (req, res, next) => {
     next(errorHandler(500, err.message));
   }
 };
+
+export const getAllTickets = async (req, res, next) => {
+  try {
+    res.status(200).json({
+      success: true,
+      message: "All tickets",
+      data: await Ticket.find({}),
+    });
+  } catch (err) {
+    next(errorHandler(500, err.message));
+  }
+};
