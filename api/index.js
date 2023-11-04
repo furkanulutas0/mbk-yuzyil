@@ -28,8 +28,7 @@ app.listen(3000, () => {
   console.log(`Server listening on port http://localhost:3000`);
 });
 
-app.use("/api/post/ticket", ticketRouter);
-app.use("/api/get/ticket", ticketRouter);
+app.use("/api/ticket", ticketRouter);
 
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;

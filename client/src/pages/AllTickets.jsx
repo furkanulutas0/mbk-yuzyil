@@ -6,7 +6,7 @@ export default function AllTickets() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const res = await fetch("/api/get/ticket/all");
+        const res = await fetch("/api/ticket/all");
         const data = await res.json();
         setTickets(data.data);
       } catch (err) {

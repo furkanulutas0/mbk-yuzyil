@@ -17,7 +17,7 @@ export default function Home() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch("/api/post/ticket/new-ticket", {
+      const res = await fetch("/api/ticket/new-ticket", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

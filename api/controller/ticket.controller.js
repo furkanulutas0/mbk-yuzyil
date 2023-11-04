@@ -36,10 +36,7 @@ export const getTicket = async (req, res, next) => {
     if (!ticketData) {
       next(errorHandler(404, "Ticket not found"));
     }
-    res
-    
-    .status(200)
-    .json({
+    res.status(200).json({
       ticketData,
     });
   } catch (err) {
