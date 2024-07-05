@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function Home() {
   const navigate = useNavigate();
-  const [activity] = useState(true);
+  const [activity] = useState(false);
   const [formData, setFormData] = useState();
   const [loading, setLoading] = useState(false);
   const handleChange = (e) => {
